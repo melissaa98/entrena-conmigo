@@ -97,7 +97,38 @@ nav a:hover {
     color: #ff0000;
     text-shadow: 0 0 10px red;
 }
-         
+ .services-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 250px;
+    padding: 25px;
+    background: #1a1a1a;
+    border: 2px solid #b30000;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255,0,0,0.8);
+}
+
+.card h3 {
+    color: #ff4444;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #ffffff;
+    font-size: 16px;
+}        
     </style>
 </head>
 
@@ -125,13 +156,28 @@ nav a:hover {
 
 <div class="container">
 
-    <h2>¿Qué ofrecemos?</h2>
+ <h2>¿Qué ofrecemos?</h2>
 
-    <div class="services">
-        ✅ Rutinas de entrenamiento personalizadas<br>
-        ✅ Recomendaciones fitness adaptadas a tus necesidades<br>
-        ✅ Seguimiento orientado a resultados<br>
-        ✅ Tecnología e inteligencia artificial al servicio de tu bienestar
+<div class="services-grid">
+
+    <div class="card">
+        <h3>🏋️ Rutinas Personalizadas</h3>
+        <p>Planes de entrenamiento adaptados a tus objetivos y nivel físico.</p>
+    </div>
+
+    <div class="card">
+        <h3>🥗 Recomendaciones Fitness</h3>
+        <p>Consejos personalizados para mejorar tu rendimiento y bienestar.</p>
+    </div>
+
+    <div class="card">
+        <h3>📈 Seguimiento</h3>
+        <p>Control de progreso y ajustes para obtener mejores resultados.</p>
+    </div>
+
+    <div class="card">
+        <h3>🤖 IA Fitness</h3>
+        <p>Tecnología inteligente para generar recomendaciones adaptadas a ti.</p>
     </div>
 
     <br>
