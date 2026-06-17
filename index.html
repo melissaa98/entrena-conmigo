@@ -166,11 +166,11 @@ nav a:hover {
 <body>
 <nav>
     <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Cómo funciona</a></li>
-        <li><a href="#">Opiniones</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#funciona">Cómo funciona</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
     </ul>
 </nav>
 
@@ -197,7 +197,7 @@ nav a:hover {
         
 </header>
 
-<div class="container">
+<div class="container" id="servicios">
 
  <h2>¿Qué ofrecemos?</h2>
 
@@ -234,7 +234,7 @@ nav a:hover {
 Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener recomendaciones fitness personalizadas.
 </p>
 
-<h2>¿Cómo funciona?</h2>
+<h2 id="funciona">¿Cómo funciona?</h2>
 
 <div class="services">
     <p>1️⃣ Completa el formulario con tus objetivos.</p>
@@ -243,18 +243,42 @@ Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener 
     <p>4️⃣ Empieza tu transformación física.</p>
 </div>
 
-<h2>Opiniones de nuestros usuarios</h2>
+<h2 id="opiniones">Opiniones de nuestros usuarios</h2>
 
-<div class="services">
-    <p>⭐⭐⭐⭐⭐ "Muy fácil de usar y muy útil." – Laura</p>
-    <p>⭐⭐⭐⭐⭐ "Las recomendaciones me ayudaron mucho." – Carlos</p>
-    <p>⭐⭐⭐⭐⭐ "Una experiencia rápida y profesional." – Marta</p>
+<div class="services-grid">
+
+    <div class="card">
+        <h3>⭐⭐⭐⭐⭐ Laura</h3>
+        <p>Muy fácil de usar y muy útil.</p>
+    </div>
+
+    <div class="card">
+        <h3>⭐⭐⭐⭐⭐ Carlos</h3>
+        <p>Las recomendaciones me ayudaron mucho.</p>
+    </div>
+
+    <div class="card">
+        <h3>⭐⭐⭐⭐⭐ Marta</h3>
+        <p>Una experiencia rápida y profesional.</p>
+    </div>
+
 </div>
 
+    <h2 id="contacto">Contacto</h2>
+
+<div class="card">
+    <p>¿Quieres un plan personalizado?</p>
+
+    <p>📧 Email: contacto@entrenaconmigo.com</p>
+
+    <p>📱 WhatsApp: +34 600 000 000</p>
+
+    <a href="#" class="button">Solicitar información</a>
 </div>
 
 <footer>
-    © 2026 Entrena Conmigo
+    <p>© 2026 Entrena Conmigo</p>
+    <p>Fitness · Nutrición · Tecnología IA</p>
 </footer>
 
 </body>
