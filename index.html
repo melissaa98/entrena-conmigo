@@ -7,11 +7,12 @@
 
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-            text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    scroll-behavior: smooth;
+    text-align: center;
         }
 
         header {
@@ -159,8 +160,29 @@ nav a:hover {
 
 .hero-stats span {
     margin: 0 15px;
-}       
+} 
+    .reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
     </style>
+
 </head>
 
 <body>
@@ -199,7 +221,7 @@ nav a:hover {
 
 <div class="container" id="servicios">
 
- <h2>¿Qué ofrecemos?</h2>
+ <h2 class="reveal">¿Qué ofrecemos?</h2>
 
 <div class="services-grid">
 
@@ -233,7 +255,7 @@ nav a:hover {
     <p>
 Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener recomendaciones fitness personalizadas.
 </p>
-    <h2>Transformaciones Reales</h2>
+    <h2 class="reveal">Transformaciones Reales</h2>
 
 <div class="services-grid">
 
@@ -251,7 +273,7 @@ Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener 
 
 </div>
 
-<h2 id="funciona">¿Cómo funciona?</h2>
+<h2 class="reveal">¿Cómo funciona?</h2>
 
 <div class="services">
     <p>1️⃣ Completa el formulario con tus objetivos.</p>
@@ -260,7 +282,7 @@ Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener 
     <p>4️⃣ Empieza tu transformación física.</p>
 </div>
 
-<h2 id="opiniones">Opiniones de nuestros usuarios</h2>
+<h2 class="reveal">Opiniones de nuestros usuarios</h2>
 
 <div class="services-grid">
 
@@ -281,7 +303,7 @@ Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener 
 
 </div>
 
-  <h2>Contacto</h2>
+  <h2 class="reveal">Contacto</h2>
 
 <div style="display:flex; justify-content:center;">
     <div class="card">
@@ -295,11 +317,32 @@ Más de 100 usuarios ya han utilizado nuestro sistema automatizado para obtener 
     <a href="#" class="button">Solicitar información</a>
 </div>
 </div>
+    <a href="https://wa.me/34600000000" class="whatsapp-float">
+    💬
+</a>
 
 <footer>
     <p>© 2026 Entrena Conmigo</p>
     <p>Fitness · Nutrición · Tecnología IA</p>
 </footer>
 
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>    
 </body>
 </html>
