@@ -826,12 +826,12 @@ document.getElementById("fitnessForm").addEventListener("submit", async function
     try {
 
         const response = await fetch("https://andrea-nuclio.app.n8n.cloud/form/6da0e764-e852-4081-8870-0af4bf615833", {
+    method: "POST",
+    body: formData,
+    mode: "cors"
+});
 
-            method: "POST",
-
-            body: formData
-
-        });
+console.log("Estado:", response.status);
 
         if(response.ok){
 
